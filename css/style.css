@@ -1,0 +1,65 @@
+﻿/*Сетка*/
+body {
+    background-color: azure;
+}
+
+#wrapper {
+    width: 1100px;
+    height: auto;
+    margin: auto;
+    background-color: #F4DCF9;
+}
+
+#header {
+    width: 100%;
+    height: auto;
+}
+
+    #header img {
+        width: 100%;
+    }
+
+#separator {
+    width: auto;
+    height: 10px;
+    background-color: #8dc73f;
+}
+
+#content {
+}
+
+#info {
+    margin: 10px 10px;
+}
+
+#footer {
+    width: 80%;
+    margin: 5px 0;
+    height: 70px;
+}
+hr {
+    color: #8dc73f;
+}
+
+/*Текст*/
+* {
+}
+
+#footer {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/*Таблицы*/
+table {
+    border-spacing: 10px;
+}
+
+/*Формы*/
+form {
+}
+
+.grocery_list {
+    width: 90%;
+}

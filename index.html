@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Эмулятор кассового места</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="content.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Шапка -->
+        <div id="header"><img src="images//logo.jpg" alt="Logo CashBox" /></div>
+
+        <!-- Тело документа -->
+        <div id="separator"></div>
+        <div id="content">
+
+            <!-- Информация о текущей дате и количестве совершенных покупок (с сервера) -->
+            <!--<div id="info">
+                <form id="info_form">
+                    <p>Текущая дата: <input type="text" name="date" readonly="readonly" /><br /></p>
+                    <p>Количество покупок за сегодня: <input type="text" name="day_amount" readonly="readonly" /></p>
+                </form>
+                <hr />
+            </div>-->
+
+            <!-- Форма заказа -->
+            <form onsubmit="return false" action="url..." method="post">
+                <table>
+                    <!-- Заголовки столбцов формы заказа -->
+                    <tr>
+                        <th class="grocery_list">Наименование товара</th>
+                        <th class="grocery_list">Цена:</th>
+                        <th class="grocery_list">Количество:</th>
+                        <th class="grocery_list">Сумма:</th>
+                    </tr>
+
+                    <tr>
+                        <!-- Выпадающий список товаров -->
+                        <td id="grocery_list">
+                            <fieldset>
+                                <select name="select">
+                                    <optgroup label="Напитки">
+                                        <option value="dr1">Сок Садочок 1л</option>
+                                        <option value="dr2">Мин.вода Боржоми 0,5л</option>
+                                        <option value="dr3">Лимонлад Росинка 2л</option>
+                                        <option value="dr4">Ликер Malibu 0,5л</option>
+                                    </optgroup>
+                                    <optgroup label="Фрукты">
+                                        <option value="fr1">Хурма</option>
+                                        <option value="fr2">Груша Вильямс</option>
+                                        <option value="fr3">Яблоко Украина</option>
+                                        <option value="fr4">Ананас Беби</option>
+                                    </optgroup>
+                                    <optgroup label="Мясо">
+                                        <option value="fr1">Баранина задняя часть</option>
+                                        <option value="fr2">Стейк свинной из грудинки</option>
+                                        <option value="fr3">Корейка свиная на ребре</option>
+                                        <option value="fr4">Свиная голень</option>
+                                    </optgroup>
+                                </select>
+                            </fieldset>
+                        </td>
+
+                        <!-- Поле для указания цены -->
+                        <td class="grocery_list">
+                            <input type="text" id="price" name="price" placeholder="Укажите стоимость" required pattern="[0-9999]{,4}" />
+                        </td>
+
+                        <!-- Поле для указания количества товара -->
+                        <td class="grocery_list">
+                            <input type="text" id="quantity" name="quantity" placeholder="Укажите количество" required pattern="[0-99]{,2}" />
+                        </td>
+
+                        <!-- Поле для подсчета суммы за товар -->
+                        <td class="grocery_list" id="result">CalcSum();</td>
+                    </tr>
+                </table>
+                <input type="submit" />
+            </form>
+        </div>
+        <div id="separator"></div>
+
+        <!-- Подвал -->
+        <div id="footer">
+            <img src="images/CardTerminal128.png" />
+        </div>
+    </div>
+</body>
+</html>
