@@ -4,16 +4,17 @@
     <meta charset="utf-8" />
     <title>Эмулятор кассового места</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="content.js"></script>
 </head>
 <body>
     <div id="wrapper">
 
         <!-- Шапка -->
-        <div id="header"><img src="images//logo.jpg" alt="Logo CashBox" /></div>
+        <div id="header"><a href="index.html" title="На главную страницу"><img src="images/logo.jpg" alt="Logo CashBox" /></a></div>
 
         <!-- Тело документа -->
-        <div id="separator"></div>
+        <div class="separator"></div>
         <div id="content">
 
             <!-- Информация о текущей дате и количестве совершенных покупок (с сервера) -->
@@ -24,23 +25,22 @@
                 </form>
                 <hr />
             </div>-->
-
             <!-- Форма заказа -->
-            <form onsubmit="return false" action="url..." method="post">
+            <form onsubmit="return false" action="/Home/Order" method="post">
                 <table>
                     <!-- Заголовки столбцов формы заказа -->
                     <tr>
                         <th class="grocery_list">Наименование товара</th>
-                        <th class="grocery_list">Цена:</th>
-                        <th class="grocery_list">Количество:</th>
-                        <th class="grocery_list">Сумма:</th>
+                        <th class="grocery_list">Цена</th>
+                        <th class="grocery_list">Количество</th>
+                        <th class="grocery_list">Сумма</th>
                     </tr>
 
                     <tr>
                         <!-- Выпадающий список товаров -->
                         <td id="grocery_list">
                             <fieldset>
-                                <select name="select">
+                                <select name="Product">
                                     <optgroup label="Напитки">
                                         <option value="dr1">Сок Садочок 1л</option>
                                         <option value="dr2">Мин.вода Боржоми 0,5л</option>
@@ -65,26 +65,35 @@
 
                         <!-- Поле для указания цены -->
                         <td class="grocery_list">
-                            <input type="text" id="price" name="price" placeholder="Укажите стоимость" required pattern="[0-9999]{,4}" />
+                            <input type="text" id="price" name="Price" placeholder="Укажите стоимость" required pattern="[0-9999]{,4}" />
                         </td>
 
                         <!-- Поле для указания количества товара -->
                         <td class="grocery_list">
-                            <input type="text" id="quantity" name="quantity" placeholder="Укажите количество" required pattern="[0-99]{,2}" />
+                            <input type="text" id="quantity" name="Quantity" placeholder="Укажите количество" required pattern="[0-99]{,2}" />
                         </td>
 
                         <!-- Поле для подсчета суммы за товар -->
-                        <td class="grocery_list" id="result">CalcSum();</td>
+                        <td class="grocery_list" id="result" name="Result">
+                            <p>CalcSum();</p>
+                        </td>
+                    </tr>
+                    <!-- Строка с кнопкой для формирования чека -->
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><input type="submit" name="submit" value="Сформировать чек" /></td>
+                        <td><img src="images/CardTerminal128.png" alt="Терминал" /></td>
                     </tr>
                 </table>
-                <input type="submit" />
             </form>
         </div>
-        <div id="separator"></div>
+        <div class="separator"></div>
 
         <!-- Подвал -->
         <div id="footer">
-            <img src="images/CardTerminal128.png" />
+            <p>
+                &copy; <a href="https://www.linkedin.com/in/maksymhavryliuk/" target="_blank">Maksym Havryliuk</a>
+            </p>
         </div>
     </div>
 </body>

@@ -1,13 +1,12 @@
-﻿/*Сетка*/
-body {
-    background-color: azure;
+﻿body {
+    background-image: url(/images/bg.jpg);
+    margin: 10px;
 }
 
 #wrapper {
     width: 1100px;
     height: auto;
     margin: auto;
-    background-color: #F4DCF9;
 }
 
 #header {
@@ -16,10 +15,11 @@ body {
 }
 
     #header img {
-        width: 100%;
+        width: 99%;
+        border: 5px double #8dc73f;
     }
 
-#separator {
+.separator {
     width: auto;
     height: 10px;
     background-color: #8dc73f;
@@ -37,12 +37,15 @@ body {
     margin: 5px 0;
     height: 70px;
 }
+
 hr {
     color: #8dc73f;
 }
 
 /*Текст*/
-* {
+a, a:visited {
+    color: black;
+    text-decoration: none;
 }
 
 #footer {
@@ -62,4 +65,16 @@ form {
 
 .grocery_list {
     width: 90%;
+}
+
+input[type=submit] {
+    background-color: #8dc73f;
+    color: black;
+    height: 40px;
+    width: 100%;
+    float: left;
+}
+
+input img {
+    height: 10px;
 }
