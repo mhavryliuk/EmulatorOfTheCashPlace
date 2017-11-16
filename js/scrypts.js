@@ -23,7 +23,7 @@
                 url: "/Home/Order",
                 data: { Product: product, Price: price, Quantity: quantity }
             }).fail(function () {
-                alert("При передаче данных произошла ошибка!");
+                alert("При передаче данных произошла ошибка! Отсутсвует принимающий сервер.");
             }).done(function (context) { //При успешной отправке получим ответ от сервера
                 alert(context);
             });
